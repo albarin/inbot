@@ -1,0 +1,4 @@
+github.com/albarin/indexa v0.0.0-20190317223805-3db51091b1b6 h1:UArnAPnyP+Kfr9jIVulCeJrHQSohxfHgPbcaSksCvIU=
+github.com/albarin/indexa v0.0.0-20190317223805-3db51091b1b6/go.mod h1:Pfluz94fE7Dc2vhfBcTL1rO5sW/Qn168/A4K/RDJwsE=
+github.com/aws/aws-lambda-go v1.9.0 h1:r9TWtk8ozLYdMW+aelUeWny8z2mjghJCMx6/uUwOLNo=
+github.com/aws/aws-lambda-go v1.9.0/go.mod h1:zUsUQhAUjYzR8AuduJPCfhBuKWUaDbQiPOG+ouzmE1A=
