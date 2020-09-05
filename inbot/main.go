@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/albarin/indexa/pkg/indexa"
 	"github.com/aws/aws-lambda-go/events"
@@ -71,6 +72,11 @@ func Handler(ctx context.Context) (Response, error) {
 						"title": "Rentabilidad ayer",
 						"value": "%.1f%%",
 						"short": false
+					},
+					{
+						"title": "Rentabilidad antes de ayer",
+						"value": "%.1f%%",
+						"short": false
 					}
 				]
 			},
@@ -105,7 +111,8 @@ func Handler(ctx context.Context) (Response, error) {
 		p.Return.TimeReturnAnnual*100,
 		p.Return.MoneyReturn*100,
 		p.Return.MoneyReturnAnnual*100,
-		p.Return.MoneyReturnAnnual*100,
+		(p.Return.Index[time.Now().AddDate(0, 0, -1).Format("20060102")]-1)*100,
+		(p.Return.Index[time.Now().AddDate(0, 0, -2).Format("20060102")]-1)*100,
 		float64(p.Return.Investment),
 		p.Return.Pl,
 		p.Return.TotalAmount,
