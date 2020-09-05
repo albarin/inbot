@@ -65,6 +65,16 @@ func Handler(ctx context.Context) (Response, error) {
 				]
 			},
 			{
+				"color": "#804de1",
+				"fields": [
+					{
+						"title": "Rentabilidad ayer",
+						"value": "%.1f%%",
+						"short": false
+					}
+				]
+			},
+			{
 				"color": "#96beff",
 				"fields": [
 					{
@@ -94,6 +104,7 @@ func Handler(ctx context.Context) (Response, error) {
 		p.Return.TimeReturn*100,
 		p.Return.TimeReturnAnnual*100,
 		p.Return.MoneyReturn*100,
+		p.Return.MoneyReturnAnnual*100,
 		p.Return.MoneyReturnAnnual*100,
 		float64(p.Return.Investment),
 		p.Return.Pl,
